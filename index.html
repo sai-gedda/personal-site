@@ -1,0 +1,140 @@
+<html lang="en">
+<head>
+    <title>Purple Dungeon</title>
+</head>
+
+<style>
+body
+{
+    background: linear-gradient(135deg, #1a0933, #0b0214, #2a0845);
+    background-size: 400% 400%;
+    animation: purpleFlames 8s ease infinite;
+    color: #e0d1ff;
+    font-family: monospace;
+    padding: 20px;
+    position: relative;
+    overflow-x: hidden;
+}
+
+@keyframes purpleFlames {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(0, 255, 128, 0.15) 0%, transparent 70%);
+    animation: auraWave 5s ease-in-out infinite alternate;
+    z-index: -1;
+}
+
+@keyframes auraWave {
+    0% { transform: scale(1); opacity: 0.4; }
+    100% { transform: scale(1.2); opacity: 0.8; }
+}
+
+.floating-elements {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.float-item {
+    position: absolute;
+    font-size: 1.5rem;
+    animation: floatAround 6s ease-in-out infinite alternate;
+}
+
+.float-1 { top: 20%; left: 10%; animation-delay: 0s; }
+.float-2 { top: 60%; left: 85%; animation-delay: 2s; }
+.float-3 { top: 80%; left: 25%; animation-delay: 4s; }
+
+@keyframes floatAround {
+    0% { transform: translateY(0px) rotate(0deg); }
+    100% { transform: translateY(-20px) rotate(10deg); }
+}
+
+div
+{
+    background-color: rgba(46, 20, 84, 0.8);
+    border: 2px solid #8a2be2;
+    height: auto;
+    width: 300px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 15px rgba(0, 255, 128, 0.2);
+}
+
+nav a
+{
+    color: #00ffcc;
+    margin-right: 15px;
+    text-decoration: none;
+    text-shadow: 0 0 5px #00ffcc;
+}
+
+h1
+{
+    color: #da70d6;
+    text-shadow: 0 0 10px #da70d6;
+}
+
+h2
+{
+    color: #00ffcc;
+    text-shadow: 0 0 8px #00ffcc;
+}
+</style>
+
+<body>
+
+<div class="floating-elements">
+    <div class="float-item float-1">👾</div>
+    <div class="float-item float-2">⭐️</div>
+    <div class="float-item float-3">👾</div>
+</div>
+
+<header>
+  <h1>WELCOME WELCOME WELCOME TO MY WEBSITE!!!!</h1>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <!-- Fixed href to match the exact ID name below -->
+    <a href="#The%20RIGHT%20way%20to%20do%20it">Me Stuff</a>
+  </nav>
+</header>
+
+<section id="about">
+  <h2>About Me</h2>
+  <div>
+    <p>HIHI! WELCOME WELCOME! I'M SAI! I'm 16 and i'm learning how to code websites in my free time and discovering new things to continually build and explore! Thank you for visiting my very first website! So happy to have you here :D!</p>
+  </div>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <div>
+    <!-- Fixed the missing opening bracket on the closing tag -->
+    <p>My first project is this dungeon. Stay tuned for more broken code :D (and mayyyybe a game, NO PROMISES 🙏)</p>
+  </div>
+</section>
+
+<section id="The RIGHT way to do it">
+  <h2>Amazing things I do</h2>
+  <div>
+    <p>I peel oranges in one single piece every single time because it's the right thing to do.</p>
+  </div>
+</section>
+
+</body>
+</html>
